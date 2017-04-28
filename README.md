@@ -119,3 +119,89 @@
 	}
 ]
 ```
+
+
+## Pixapp
+
+```js
+var gui = window.require('nw.gui');
+var spawn = window.require('child_process').spawn;
+var exec = window.require('child_process').exec;
+
+module.exports = {
+
+	// панель с чатом
+	im: {
+		isActive: true,
+		url: 'https://www.samsonpost.ru/desktop_app/'
+	},
+
+	// реакция на время
+	timeCheck: {
+		isActive: true,
+
+		// как часто проверять условия
+		interval: 1000,
+
+		// когда обновлять условия
+		renewCheck: function (dateOld, dateNew) {
+			return dateOld.getDay() !== dateNew.getDay();
+		},
+
+		// проверки
+		checks: [
+
+			// показ пробок
+			{
+
+				// что нужно проверить
+				check: function (date) {
+					return date.getHours() === 18 && date.getMinutes() === 0
+				},
+				
+				// что нужно сделать
+				action: function () {
+					gui.Shell.openExternal('https://yandex.ru/maps/193/voronezh/?l=trf');
+				}
+			},
+
+			// показ ссылок
+			{
+				check: function (date) {
+					return date.getHours() === 12 && date.getMinutes() === 0
+				},
+				action: function () {
+
+					// СДЕЛАТЬ
+					// удалить, когда не нужно будет указывать полный путь к Опере
+					// или когда данные с вебплатформдайли будут сами обновляться
+					console.log( process.env.PATH );
+
+					spawn('C:\\Program Files (x86)\\OperaNew\\launcher.exe', ['?', 'http://webplatformdaily.org/']).on('error', function (e) {
+						console.log(e);
+					});
+
+					gui.Shell.openExternal('http://tools.samsonpost.ru/to-markdown/');
+					// gui.Shell.openExternal('http://pixhub.ru/tools/kb/');
+					gui.Shell.openExternal('https://twitter.com/webstandards_ru/');
+				}
+			},
+
+			// старт пщпщпщ
+			// http://txdv.github.io/cstrike-cvarlist/
+			{
+				check: function (date) {
+					return date.getHours() === 12 && date.getMinutes() === 35
+				},
+				action: function () {
+					exec('start D:\\common\\games\\CS1.6\\Counter-Strike\\hlds.exe -console -game cstrike', {
+						cwd: 'D:\\common\\games\\CS1.6\\Counter-Strike'
+					}).on('error', function (e) {
+						console.log(e);
+					});
+				}
+			}
+		]
+	}
+}
+```
