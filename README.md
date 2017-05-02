@@ -205,3 +205,47 @@ module.exports = {
 	}
 }
 ```
+
+## Пщпщпщ
+
+```
+// Use this file to configure your DEDICATED server. 
+// This config file is executed on server start.
+
+// disable autoaim
+sv_aim 0
+
+// disable clients' ability to pause the server
+pausable 0
+
+// default server name. Change to "Bob's Server", etc.
+hostname "INT 1.6 Server"
+
+// maximum client movement speed 
+sv_maxspeed 320
+
+mp_timelimit 40
+
+mp_friendlyfire 0
+
+mp_forcechasecam 1
+
+mp_c4timer 30
+
+mp_roundtime 1.5
+mp_buytime 1.5
+
+mp_freezetime 2
+
+sv_cheats 0
+rcon_password "pierrdunn"
+
+maxplayers 32
+
+// load ban files
+exec listip.cfg
+exec banned.cfg
+
+map de_westwood
+
+```
