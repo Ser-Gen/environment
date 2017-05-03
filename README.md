@@ -188,7 +188,6 @@ module.exports = {
 			},
 
 			// старт пщпщпщ
-			// http://txdv.github.io/cstrike-cvarlist/
 			{
 				check: function (date) {
 					return date.getHours() === 12 && date.getMinutes() === 35
@@ -209,8 +208,7 @@ module.exports = {
 ## Пщпщпщ
 
 ```
-// Use this file to configure your DEDICATED server. 
-// This config file is executed on server start.
+// http://txdv.github.io/cstrike-cvarlist/
 
 // disable autoaim
 sv_aim 0
