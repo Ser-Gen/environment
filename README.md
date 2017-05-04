@@ -4,6 +4,8 @@
 
 Шрифт: https://github.com/tonsky/FiraCode
 
+* [Beautify](https://marketplace.visualstudio.com/items?itemName=HookyQR.beautify)
+
 ```json
 {
 	"editor.fontFamily": "Fira Code Light",
@@ -17,14 +19,17 @@
 	"window.reopenFolders": "all",
 	"window.openFilesInNewWindow": "default",
 	"files.associations": {
-		"*.pcss": "css"
+		"*.pcss": "css",
+		"*.styl": "stylus"
 	},
-	 "files.exclude": {
+	"files.autoGuessEncoding": true,
+	"files.exclude": {
 		"**/.git": true,
 		"**/.svn": true,
 		"**/.hg": true,
 		"**/.DS_Store": true,
-		"**/node_modules": true
+		"**/node_modules": true,
+		"**/bitrix": true
 	},
 	"workbench.editor.showTabs": false,
 	"workbench.iconTheme": "vs-seti",
@@ -33,7 +38,8 @@
 		"css.autoInsertVendorPrefixes": false,
 		"css.syntaxes": ["css, less, sass, scss, stylus, styl, postcss"]
 	},
-	"files.autoSave": "off"
+	"files.autoSave": "off",
+	"editor.insertSpaces": false
 }
 ```
 
