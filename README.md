@@ -32,6 +32,7 @@
 		"**/bitrix": true
 	},
 	"workbench.editor.showTabs": false,
+	"workbench.colorTheme": "Default Dark+",
 	"workbench.iconTheme": "vs-seti",
 	"workbench.welcome.enabled": true,
 	"emmet.preferences": {
