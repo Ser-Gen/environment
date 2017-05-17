@@ -16,6 +16,7 @@
 	"editor.minimap.enabled": true,
 	"editor.renderIndentGuides": true,
 	"editor.wordWrap": "on",
+	"editor.snippetSuggestions": "top",
 	"window.reopenFolders": "all",
 	"window.openFilesInNewWindow": "default",
 	"files.associations": {
@@ -28,7 +29,6 @@
 		"**/.svn": true,
 		"**/.hg": true,
 		"**/.DS_Store": true,
-		"**/node_modules": true,
 		"**/bitrix": true
 	},
 	"workbench.editor.showTabs": false,
