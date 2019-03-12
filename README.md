@@ -17,7 +17,6 @@
 	"editor.renderIndentGuides": true,
 	"editor.wordWrap": "on",
 	"editor.snippetSuggestions": "top",
-	"window.reopenFolders": "all",
 	"window.openFilesInNewWindow": "default",
 	"files.associations": {
 		"*.pcss": "css",
@@ -34,13 +33,14 @@
 	"workbench.editor.showTabs": false,
 	"workbench.colorTheme": "Default Dark+",
 	"workbench.iconTheme": "vs-seti",
-	"workbench.welcome.enabled": true,
 	"emmet.preferences": {
 		"css.autoInsertVendorPrefixes": false,
 		"css.syntaxes": ["css, less, sass, scss, stylus, styl, postcss"]
 	},
 	"files.autoSave": "off",
-	"editor.insertSpaces": false
+	"editor.insertSpaces": false,
+	"telemetry.enableTelemetry": false,
+	"files.insertFinalNewline": true,
 }
 ```
 
