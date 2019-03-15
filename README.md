@@ -97,7 +97,8 @@
 	"show_encoding": true,
 	"tab_size": 4,
 	"theme": "Material-Theme-Darker.sublime-theme",
-	"word_wrap": true
+	"word_wrap": true,
+	"ensure_newline_at_eof_on_save": true
 }
 ```
 
