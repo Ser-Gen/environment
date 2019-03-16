@@ -40,7 +40,9 @@
 	"files.autoSave": "off",
 	"editor.insertSpaces": false,
 	"telemetry.enableTelemetry": false,
+	"editor.smoothScrolling": true,
 	"files.insertFinalNewline": true,
+	"files.trimFinalNewlines": true,
 }
 ```
 
@@ -52,7 +54,53 @@
 	{ "key": "ctrl+alt+left", "command": "editor.emmet.action.selectPreviousItem" },
 	{ "key": "ctrl+alt+right", "command": "editor.emmet.action.selectNextItem" },
 	{ "key": "shift+alt+left", "command": "editor.emmet.action.balanceInward" },
-	{ "key": "shift+alt+right", "command": "editor.emmet.action.balanceOutward" }
+	{ "key": "shift+alt+right", "command": "editor.emmet.action.balanceOutward" },
+	{
+		"key": "ctrl+k ctrl+u",
+		"command": "-editor.action.removeCommentLine",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "ctrl+k ctrl+c",
+		"command": "-editor.action.addCommentLine",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "ctrl+k ctrl+u",
+		"command": "editor.action.transformToUppercase"
+	},
+	{
+		"key": "ctrl+k ctrl+l",
+		"command": "editor.action.transformToLowercase"
+	},
+	{
+		"key": "ctrl+alt+d",
+		"command": "workbench.view.debug"
+	},
+	{
+		"key": "ctrl+shift+d",
+		"command": "-workbench.view.debug"
+	},
+	{
+		"key": "ctrl+shift+d",
+		"command": "editor.action.addSelectionToNextFindMatch",
+		"when": "editorFocus"
+	},
+	{
+		"key": "ctrl+d",
+		"command": "-editor.action.addSelectionToNextFindMatch",
+		"when": "editorFocus"
+	},
+	{
+		"key": "ctrl+d",
+		"command": "editor.action.copyLinesDownAction",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "shift+alt+down",
+		"command": "-editor.action.copyLinesDownAction",
+		"when": "editorTextFocus && !editorReadonly"
+	},
 ]
 ```
 
