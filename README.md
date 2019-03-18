@@ -43,6 +43,7 @@
 	"editor.smoothScrolling": true,
 	"files.insertFinalNewline": true,
 	"files.trimFinalNewlines": true,
+	"editor.minimap.showSlider": "always",
 }
 ```
 
